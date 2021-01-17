@@ -1,0 +1,106 @@
+@charset "UTF-8";
+
+/*!
+Theme Name: Cocoon Child
+Description: Cocoon専用の子テーマ
+Theme URI: https://wp-cocoon.com/
+Author: わいひら
+Author URI: https://nelog.jp/
+Template:   cocoon-master
+Version:    1.1.2
+*/
+
+/************************************
+** 子テーマ用のスタイルを書く
+************************************/
+/*必要ならばここにコードを書く*/
+
+/************************************
+** レスポンシブデザイン用のメディアクエリ
+************************************/
+/*1023px以下*/
+@media screen and (max-width: 1023px){
+  /*必要ならばここにコードを書く*/
+}
+
+/*834px以下*/
+@media screen and (max-width: 834px){
+  /*必要ならばここにコードを書く*/
+}
+
+/*480px以下*/
+@media screen and (max-width: 480px){
+  /*必要ならばここにコードを書く*/
+}
+
+// ヘッダー
+.header{
+	min-height: 200px;
+	position: relative;
+
+	.header-in{
+		background-color: white;
+		position: absolute;
+		color: black;
+		max-width: 400px;
+		top: 50%;
+		transform: translateY(-50%);
+		
+		.logo-header{
+			padding: 0;
+			margin: 0;
+		}
+		.site-name-text{
+			color: #76A7A7;
+			font-weight: bold;
+		}
+		.tagline{
+			margin: 0 3em 0.5em;
+			border-bottom: 3px solid #000;
+			display: block;
+		}
+	}
+
+}
+
+@import 'variables';
+
+@import 'home';
+@import 'category';
+@import 'entry-card';
+
+
+
+	// 「最近の投稿」ウィジェット
+	.widget_recent_entries{
+		ul{
+			li{
+				display: flex;
+				align-items: center;
+				flex-direction: row-reverse;
+				justify-content: flex-end;
+				border-bottom: 1px dotted gray;
+
+				a{
+					border: none;
+				}
+
+				span{
+					flex-shrink: 0;
+					flex-basis: 100px;
+					color: gray;
+				}
+			}
+		}
+	}
+
+
+
+
+
+
+
+
+
+
+
