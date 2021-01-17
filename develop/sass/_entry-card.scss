@@ -4,17 +4,6 @@ a.entry-card-wrap{
     text-decoration: underline;
   }
 }
-// .card{
-//   &-thumb{
-//     position:relative;
-//   }
-//   &-thumb:before{
-//     content:"";
-//     display:block;
-//     padding-top: 66.6%; /* 3:2 = 2/3*100 */
-//   }
-
-// }
 
 .entry-card{
 	// サムネイルのサイズ統一
@@ -35,8 +24,6 @@ a.entry-card-wrap{
     }
     
   box-shadow: 0px 0px 5px $shadow;
-  // padding: 1em;
-  // border-radius: 5px;
 
   
 

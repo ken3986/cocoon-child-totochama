@@ -4,7 +4,6 @@
  * ページネーションの下にもウィジェットエリアが欲しかったというだけのやつ。
  */
 
-if(!function_exists('register_index_bottom_plus_widget_area')):
 function register_index_bottom_plus_widget_area(){
   register_sidebars(1,
     array(
@@ -17,5 +16,4 @@ function register_index_bottom_plus_widget_area(){
       'after_title' => '</div>',
     ));
 }
-endif;
 register_index_bottom_plus_widget_area();
