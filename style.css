@@ -6,7 +6,7 @@ Theme URI: https://wp-cocoon.com/
 Author: Ken
 Author URI: 
 Template:   cocoon-master
-Version:    1.0
+Version:    1.01
 */
 /************************************
 ** 子テーマ用のスタイルを書く
@@ -128,8 +128,53 @@ Version:    1.0
   text-decoration: none;
 }
 
-a.entry-card-wrap:hover {
+.entry-card-wrap {
+  position: relative;
+}
+
+.entry-card-wrap:hover {
   text-decoration: underline;
+}
+
+.categories-list {
+  z-index: 100;
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  right: 0.5em;
+  bottom: 0.5em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.categories-list li {
+  margin-left: 0.5em;
+  border-radius: 5px;
+}
+
+.categories-list li:hover {
+  -webkit-box-shadow: 0px 0px 10px cyan;
+          box-shadow: 0px 0px 10px cyan;
+  -webkit-transition: -webkit-box-shadow 0.2s ease-out;
+  transition: -webkit-box-shadow 0.2s ease-out;
+  transition: box-shadow 0.2s ease-out;
+  transition: box-shadow 0.2s ease-out, -webkit-box-shadow 0.2s ease-out;
+}
+
+.categories-list .cat-link {
+  margin: 0;
+  font-size: 12px;
+  padding: 0.2em 1em;
+  display: block;
+  border: none;
+  border-radius: 5px;
+  background-color: transparent;
+}
+
+.categories-list .cat-link:hover {
+  opacity: 1;
 }
 
 .entry-card {
@@ -156,25 +201,6 @@ a.entry-card-wrap:hover {
   position: absolute;
   top: 0;
   left: 0;
-}
-
-.entry-card .categories-list {
-  position: absolute;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  right: 0.5em;
-  bottom: 0.5em;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.entry-card .categories-list li {
-  font-size: 12px;
-  padding: 0.2em 1em;
-  margin-left: 0.5em;
-  border-radius: 5px;
 }
 
 .entry-card-content {
