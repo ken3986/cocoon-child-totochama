@@ -1,0 +1,22 @@
+	// 「最近の投稿」ウィジェット
+	.widget_recent_entries{
+		ul{
+			li{
+				display: flex;
+				align-items: center;
+				flex-direction: row-reverse;
+				justify-content: flex-end;
+				border-bottom: 1px dotted gray;
+
+				a{
+					border: none;
+				}
+
+				span{
+					flex-shrink: 0;
+					flex-basis: 100px;
+					color: gray;
+				}
+			}
+		}
+	}

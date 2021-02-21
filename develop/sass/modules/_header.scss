@@ -1,0 +1,29 @@
+// ヘッダー
+.header{
+	min-height: 200px;
+	position: relative;
+
+	.header-in{
+		background-color: white;
+		position: absolute;
+		color: black;
+		max-width: 400px;
+		top: 50%;
+		transform: translateY(-50%);
+		
+		.logo-header{
+			padding: 0;
+			margin: 0;
+		}
+		.site-name-text{
+			color: #76A7A7;
+			font-weight: bold;
+		}
+		.tagline{
+			margin: 0 3em 0.5em;
+			border-bottom: 3px solid #000;
+			display: block;
+		}
+	}
+
+}

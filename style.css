@@ -6,28 +6,135 @@ Theme URI: https://wp-cocoon.com/
 Author: Ken
 Author URI: 
 Template:   cocoon-master
-Version:    1.01
+Version:    1.0
 */
 /************************************
 ** 子テーマ用のスタイルを書く
 ************************************/
 /*必要ならばここにコードを書く*/
-/************************************
-** レスポンシブデザイン用のメディアクエリ
-************************************/
-/*1023px以下*/
-@media screen and (max-width: 1023px) {
-  /*必要ならばここにコードを書く*/
+.home .content-top-in {
+  background-color: #fff;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 70% 1fr;
+      grid-template-columns: 70% 1fr;
+  /* aside */
+  /* .widget\box_menu */
 }
 
-/*834px以下*/
+.home .content-top-in aside:first-child {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1 / 2;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  grid-row: 1 / 3;
+}
+
+.home .content-top-in aside:nth-child(2) {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2 / 3;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1 / 2;
+}
+
+.home .content-top-in aside:nth-child(3) {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2 / 3;
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  grid-row: 2 / 3;
+}
+
+.home .content-top-in aside:last-child {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-column: 1 / 3;
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 1;
+  grid-row: 3 / 4;
+}
+
 @media screen and (max-width: 834px) {
-  /*必要ならばここにコードを書く*/
+  .home .content-top-in aside:first-child {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-column: 1 / 3;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    grid-row: 1 / 2;
+  }
+  .home .content-top-in aside:nth-child(2) {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1 / 2;
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 1;
+    grid-row: 2 / 3;
+  }
+  .home .content-top-in aside:nth-child(3) {
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
+    grid-column: 2 / 3;
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 1;
+    grid-row: 2 / 3;
+  }
 }
 
-/*480px以下*/
-@media screen and (max-width: 480px) {
-  /*必要ならばここにコードを書く*/
+.home .content-top-in .widget_recent_entries {
+  padding: 1em;
+}
+
+.home .content-top-in .widget_recent_entries a {
+  width: 100%;
+}
+
+.home .content-top-in .widget_recent_entries a:hover {
+  text-decoration: underline;
+}
+
+.home .content-top-in .widget_box_menu .box-menus {
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.home .content-top-in .widget_box_menu .box-menus .box-menu {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+.home .content-top-in .widget_box_menu .box-menus .box-menu:last-child {
+  margin-right: 0;
+}
+
+.home .content-top-in .widget_box_menu .box-menus .box-menu .box-menu-icon {
+  height: 200px;
+  overflow: hidden;
+}
+
+.home .content-top-in .widget_box_menu .box-menus .box-menu .box-menu-icon img {
+  max-width: 100%;
+  max-height: none;
+}
+
+.category .category-menu {
+  background-color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+  padding: 2em 0;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.category .category-menu a {
+  text-decoration: none;
 }
 
 .header {
@@ -59,73 +166,6 @@ Version:    1.01
   margin: 0 3em 0.5em;
   border-bottom: 3px solid #000;
   display: block;
-}
-
-.home .content-top-in {
-  background-color: #fff;
-}
-
-.home .widget.widget-content-top.widget_recent_entries {
-  float: left;
-  width: 70%;
-  padding: 1em;
-}
-
-.home .widget.widget-content-top.widget_recent_entries a {
-  width: 100%;
-}
-
-.home .widget.widget-content-top.widget_recent_entries a:hover {
-  text-decoration: underline;
-}
-
-.home .widget.widget-content-top.widget_sns_follow_buttons {
-  float: right;
-  width: 25%;
-}
-
-.home .widget.widget-content-top.widget_box_menu {
-  clear: both;
-}
-
-.home .widget.widget-content-top.widget_box_menu .box-menus {
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-}
-
-.home .widget.widget-content-top.widget_box_menu .box-menus .box-menu {
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
-}
-
-.home .widget.widget-content-top.widget_box_menu .box-menus .box-menu:last-child {
-  margin-right: 0;
-}
-
-.home .widget.widget-content-top.widget_box_menu .box-menus .box-menu .box-menu-icon {
-  height: 200px;
-  overflow: hidden;
-}
-
-.home .widget.widget-content-top.widget_box_menu .box-menus .box-menu .box-menu-icon img {
-  max-width: 100%;
-  max-height: none;
-}
-
-.category .category-menu {
-  background-color: #fff;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  list-style: none;
-  padding: 2em 0;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-}
-
-.category .category-menu a {
-  text-decoration: none;
 }
 
 .entry-card-wrap {
@@ -253,5 +293,26 @@ Version:    1.01
   -ms-flex-preferred-size: 100px;
       flex-basis: 100px;
   color: gray;
+}
+
+/************************************
+** レスポンシブデザイン用のメディアクエリ
+************************************/
+/*1023px以下*/
+@media screen and (max-width: 1023px) {
+  /*必要ならばここにコードを書く*/
+}
+
+/*834px以下*/
+@media screen and (max-width: 834px) {
+  /*必要ならばここにコードを書く*/
+}
+
+/*480px以下*/
+@media screen and (max-width: 480px) {
+  /*必要ならばここにコードを書く*/
+  .categories-list {
+    display: none;
+  }
 }
 /*# sourceMappingURL=style.css.map */
