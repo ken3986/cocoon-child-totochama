@@ -1,0 +1,22 @@
+/*------------------------------*/
+/* SNSフォローボタンウィジェット */
+/*------------------------------*/
+.widget_sns_follow_buttons {
+  @media screen and (max-width: 834px) {
+    .sns-follow-buttons {
+      flex-wrap: nowrap;
+      justify-content: space-around;
+      padding: 0 8px;
+      .follow-button:not(:last-child) {
+        margin-right: 8px;
+      }
+    }
+  }
+  @media screen and (max-width: 480px) {
+    .follow-button {
+      height: 60px;
+      width: 60px;
+      border-radius: 50%;
+    }
+  }
+}

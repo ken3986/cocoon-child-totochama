@@ -5,7 +5,7 @@ Theme Name: Cocoon Child Totocyama
 Description: Cocoon専用の子テーマ
 Theme URI: https://wp-cocoon.com/
 Author: Ken
-Author URI: 
+Author URI:
 Template:   cocoon-master
 Version:    1.02
 */
@@ -29,6 +29,7 @@ Version:    1.02
 // コンポーネント
 @import 'components/entry-card';
 @import 'components/widget_recent_entries';
+@import 'components/widget_sns_follow_buttons';
 
 /************************************
 ** レスポンシブデザイン用のメディアクエリ

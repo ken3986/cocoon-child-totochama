@@ -4,9 +4,9 @@ Theme Name: Cocoon Child Totocyama
 Description: Cocoon専用の子テーマ
 Theme URI: https://wp-cocoon.com/
 Author: Ken
-Author URI: 
+Author URI:
 Template:   cocoon-master
-Version:    1.0
+Version:    1.02
 */
 /************************************
 ** 子テーマ用のスタイルを書く
@@ -69,19 +69,27 @@ Version:    1.0
   }
   .home .content-top-in aside:nth-child(2) {
     -ms-grid-column: 1;
-    -ms-grid-column-span: 1;
-    grid-column: 1 / 2;
+    -ms-grid-column-span: 2;
+    grid-column: 1 / 3;
     -ms-grid-row: 2;
     -ms-grid-row-span: 1;
     grid-row: 2 / 3;
   }
   .home .content-top-in aside:nth-child(3) {
-    -ms-grid-column: 2;
-    -ms-grid-column-span: 1;
-    grid-column: 2 / 3;
-    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-column: 1 / 3;
+    -ms-grid-row: 3;
     -ms-grid-row-span: 1;
-    grid-row: 2 / 3;
+    grid-row: 3 / 4;
+  }
+  .home .content-top-in aside:last-child {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-column: 1 / 3;
+    -ms-grid-row: 4;
+    -ms-grid-row-span: 1;
+    grid-row: 4 / 5;
   }
 }
 
@@ -120,6 +128,12 @@ Version:    1.0
 .home .content-top-in .widget_box_menu .box-menus .box-menu .box-menu-icon img {
   max-width: 100%;
   max-height: none;
+}
+
+@media screen and (max-width: 834px) {
+  .home .content-top-in .widget_box_menu .box-menu {
+    width: 100%;
+  }
 }
 
 .category .category-menu {
@@ -293,6 +307,30 @@ Version:    1.0
   -ms-flex-preferred-size: 100px;
       flex-basis: 100px;
   color: gray;
+}
+
+/*------------------------------*/
+/* SNSフォローボタンウィジェット */
+/*------------------------------*/
+@media screen and (max-width: 834px) {
+  .widget_sns_follow_buttons .sns-follow-buttons {
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    padding: 0 8px;
+  }
+  .widget_sns_follow_buttons .sns-follow-buttons .follow-button:not(:last-child) {
+    margin-right: 8px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .widget_sns_follow_buttons .follow-button {
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+  }
 }
 
 /************************************
