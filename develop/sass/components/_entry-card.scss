@@ -38,6 +38,10 @@
 			opacity: 1;
 		}
 	}
+
+	@media  screen and (max-width: $breakpoint_sm) {
+		display: none;
+	}
 }
 
 .entry-card{
@@ -57,10 +61,10 @@
 			position:absolute;
 			top:0; left:0;
     }
-    
+
   box-shadow: 0px 0px 5px $shadow;
 
-  
+
 
 
 
@@ -70,13 +74,13 @@
   }
 	// サムネイルタイトル
 	&-title{
-		margin: 0 0 0.5em 0; 
+		margin: 0 0 0.5em 0;
 	}
 	// 本文抜粋
 	&-snippet{
 		max-height: none;
   }
-  
+
   // メタ情報
   &-meta{
     bottom: 0.5em;

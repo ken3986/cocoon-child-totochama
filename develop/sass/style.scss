@@ -38,19 +38,19 @@ Version:    1.02
 ** レスポンシブデザイン用のメディアクエリ
 ************************************/
 /*1023px以下*/
-@media screen and (max-width: 1023px){
+@media screen and (max-width: $breakpoint_lg){
   /*必要ならばここにコードを書く*/
 }
 
 /*834px以下*/
-@media screen and (max-width: 834px){
+@media screen and (max-width: $breakpoint_md){
   /*必要ならばここにコードを書く*/
 }
 
 /*480px以下*/
-@media screen and (max-width: 480px){
+@media screen and (max-width: $breakpoint_sm){
   /*必要ならばここにコードを書く*/
-	@import 'responsive/max480px';
+	// @import 'responsive/max480px';
 }
 
 

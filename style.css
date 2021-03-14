@@ -12,6 +12,15 @@ Version:    1.02
 ** 子テーマ用のスタイルを書く
 ************************************/
 /*必要ならばここにコードを書く*/
+/*------------------------------*/
+/* 変数設定 */
+/*------------------------------*/
+/*------------------------------*/
+/* カラー */
+/*------------------------------*/
+/*------------------------------*/
+/* メディアクエリ */
+/*------------------------------*/
 .home .content-top-in {
   background-color: #fff;
   display: -ms-grid;
@@ -108,6 +117,8 @@ Version:    1.02
 .home .content-top-in .widget_box_menu .box-menus {
   -ms-flex-pack: distribute;
       justify-content: space-around;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
 }
 
 .home .content-top-in .widget_box_menu .box-menus .box-menu {
@@ -130,7 +141,11 @@ Version:    1.02
   max-height: none;
 }
 
-@media screen and (max-width: 834px) {
+@media screen and (max-width: 480px) {
+  .home .content-top-in .widget_box_menu .box-menus {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
   .home .content-top-in .widget_box_menu .box-menu {
     width: 100%;
   }
@@ -229,6 +244,12 @@ Version:    1.02
 
 .categories-list .cat-link:hover {
   opacity: 1;
+}
+
+@media screen and (max-width: 480px) {
+  .categories-list {
+    display: none;
+  }
 }
 
 .entry-card {
@@ -358,8 +379,5 @@ Version:    1.02
 /*480px以下*/
 @media screen and (max-width: 480px) {
   /*必要ならばここにコードを書く*/
-  .categories-list {
-    display: none;
-  }
 }
 /*# sourceMappingURL=style.css.map */

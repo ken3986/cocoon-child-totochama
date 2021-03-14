@@ -2,7 +2,7 @@
 /* FooGallery */
 /*------------------------------*/
 .foogallery {
-  @media screen and (max-width: 480px) {
+  @media screen and (max-width: $breakpoint_sm) {
     .fg-item {
       width: calc(50% - 10px);
     }
