@@ -16,7 +16,7 @@ if (is_front_page_type_index()) {
   <a class="entry-card-wrap a-wrap border-element cf" href="<?php echo esc_url(get_the_permalink()); ?>"title="<?php echo esc_attr(get_the_title()); ?>">
   <!-- <a href="<?php echo esc_url(get_the_permalink()); ?>" class="entry-card-wrap a-wrap border-element cf" title="<?php echo esc_attr(get_the_title()); ?>"> -->
   <span href=""></span>
-    <article<?php echo $article_id_attr; ?> <?php post_class( array('post-'.get_the_ID(), 'entry-card','e-card', 'cf') ); ?>>
+    <article <?php echo $article_id_attr; ?> <?php post_class( array('post-'.get_the_ID(), 'entry-card','e-card', 'cf') ); ?>>
       <figure class="entry-card-thumb card-thumb e-card-thumb">
         <?php
         //サムネイルタグを取得
@@ -42,13 +42,12 @@ if (is_front_page_type_index()) {
         <!-- カテゴリーラベル -->
         <!-- （the_nolink_category()は、parent-category^label.phpで一番上のカテゴリーを取得するようにオーバーライド） -->
         <!------------------------------>
-        <?php 
+        <?php
           the_nolink_category(null, apply_filters('is_entry_card_category_label_visible', true)); //カテゴリラベルの取得
         ?>
 
         <!------------------------------>
         <!-- カテゴリーリスト -->
-        <!-- ColorfulCategoriesプラグインで色付け -->
         <!------------------------------>
         <?php
           // カテゴリーリストの表示
@@ -56,12 +55,16 @@ if (is_front_page_type_index()) {
           if(get_the_category()){
             $categories = null;
             $categories .= '<ul class="categories-list">';
-              foreach((categories_term_order(get_the_category())) as $category){
-                
+            foreach((categories_term_order(get_the_category())) as $category){
 
-                $style = null;
+              $style = null;
+              // ColorfulCategoriesプラグインで色付け
+              if (class_exists("ColorfulCategories")) {
                 $color = ColorfulCategories::getColorForTerm($category->term_id, true);
                 $categories .= '<li style="background-color: '.esc_attr($color).';">';
+              } else {
+                $categories .= '<li>';
+              }
                   $categories .= '<object><a class="cat-link cat-link-' . $category->cat_ID . '" href="' . get_category_link( $category->cat_ID ) . '" ' . 'title="「' . $category->name . '」の投稿を表示"' . $style . '>';
                     $categories .= $category->name;
                   $categories .= '</a></object>';
