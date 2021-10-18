@@ -1,0 +1,25 @@
+/*------------------------------*/
+/* Bootstrapの変数上書きファイル */
+/*------------------------------*/
+
+// scss-docs-start grid-breakpoints
+$grid-breakpoints: (
+  xs: 0,
+  sm: 481px,
+  md: 835px,
+  lg: 1024px,
+  xl: 1200px,
+  xxl: 1400px
+);
+// scss-docs-end grid-breakpoints
+
+
+// scss-docs-start container-max-widths
+$container-max-widths: (
+  sm: 516px,
+  md: 870px,
+  lg: 1060px,
+  xl: 1140px,
+  xxl: 1320px
+);
+// scss-docs-end container-max-widths

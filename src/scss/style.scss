@@ -14,8 +14,13 @@ Version:    1.1.5
 ** 子テーマ用のスタイルを書く
 ************************************/
 /*必要ならばここにコードを書く*/
-@import 'variables';
 
+// Bootstrapの一部のみ読み込み
+@import 'bs_custom';
+
+// 変数の読み込み
+@import 'variables';
+@import 'mixins';
 
 // ページ
 @import 'pages/home';
@@ -24,6 +29,7 @@ Version:    1.1.5
 
 // モジュール
 @import 'modules/header';
+@import 'modules/top_header';
 
 
 // コンポーネント
