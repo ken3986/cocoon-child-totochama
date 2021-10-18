@@ -6,11 +6,11 @@
   "author": "ken3986 <naka_ken8686@yahoo.co.jp>",
   "license": "MIT",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack --mode production",
-    "dev": "webpack --mode development",
-    "watch": "webpack --mode development --watch --color --progress",
-    "sass-ver": "sass --version"
+    "dev": "mix",
+    "watch": "mix watch",
+    "watch-poll": "mix watch -- --watch-options-poll=1000",
+    "hot": "mix watch --hot",
+    "build": "mix --production"
   },
   "keywords": [],
   "bugs": {
@@ -22,13 +22,11 @@
   },
   "devDependencies": {
     "browser-sync": "^2.27.5",
-    "browser-sync-webpack-plugin": "^2.3.0",
-    "css-loader": "^6.4.0",
-    "fibers": "^5.0.0",
-    "mini-css-extract-plugin": "^2.4.2",
-    "sass": "^1.42.1",
-    "sass-loader": "^12.1.0",
-    "webpack": "^5.58.1",
-    "webpack-cli": "^4.9.0"
+    "browser-sync-webpack-plugin": "2.3.0",
+    "dotenv": "^10.0.0",
+    "laravel-mix": "^6.0.34",
+    "postcss": "^8.3.9",
+    "sass": "^1.43.2",
+    "sass-loader": "12.1.0"
   }
 }

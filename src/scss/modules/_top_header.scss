@@ -1,0 +1,36 @@
+/*------------------------------*/
+/* トップヘッダーのスタイル */
+/*------------------------------*/
+
+.top-header {
+  // 「最新の投稿」ブロック
+  ul.wp-block-latest-posts {
+
+    li{
+      display: flex;
+      align-items: center;
+      flex-direction: row-reverse;
+      justify-content: flex-end;
+      border-bottom: 1px dotted gray;
+
+      a{
+        border: none;
+        width: 100%;
+        padding: 10px;
+        text-decoration: none;
+        color: #333;
+				&:hover{
+					text-decoration: underline;
+				}
+      }
+
+      time{
+        padding: 2px;
+        font-size: 0.7em;
+        flex-shrink: 0;
+        flex-basis: 150px;
+        color: gray;
+      }
+    }
+  }
+}
